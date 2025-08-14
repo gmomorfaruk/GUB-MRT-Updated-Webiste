@@ -1,0 +1,945 @@
+.why-sponsor-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.why-sponsor-section .night {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.why-sponsor-section .container {
+  position: relative;
+  z-index: 1; /* ensures text appears above stars */
+  padding: 4rem 2rem;
+  color: white;
+}
+
+.shooting_star {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(-45deg, rgba(95, 145, 255, 1), rgba(0, 0, 255, 0));
+  border-radius: 999px;
+  filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
+  animation: tail 3s ease-in-out infinite, shooting 3s ease-in-out infinite;
+}
+
+.shooting_star::before,
+.shooting_star::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 0;
+  height: 2px;
+  background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgba(95, 145, 255, 1), rgba(0, 0, 255, 0));
+  border-radius: 100%;
+  animation: shining 3s ease-in-out infinite;
+}
+
+.shooting_star::after {
+  transform: translateX(50%) rotateZ(-45deg);
+}
+
+.shooting_star::before {
+  transform: translateX(50%) rotateZ(45deg);
+}
+
+/* Random positions */
+.shooting_star:nth-child(1)  { top: 20%; left: 10%; animation-delay: 0s; }
+.shooting_star:nth-child(2)  { top: 40%; left: 30%; animation-delay: 0.5s; }
+.shooting_star:nth-child(3)  { top: 60%; left: 50%; animation-delay: 1s; }
+.shooting_star:nth-child(4)  { top: 80%; left: 70%; animation-delay: 1.5s; }
+.shooting_star:nth-child(5)  { top: 50%; left: 20%; animation-delay: 2s; }
+.shooting_star:nth-child(6)  { top: 10%; left: 60%; animation-delay: 2.5s; }
+.shooting_star:nth-child(7)  { top: 30%; left: 80%; animation-delay: 3s; }
+.shooting_star:nth-child(8)  { top: 70%; left: 40%; animation-delay: 3.5s; }
+.shooting_star:nth-child(9)  { top: 90%; left: 50%; animation-delay: 4s; }
+.shooting_star:nth-child(10) { top: 15%; left: 25%; animation-delay: 4.5s; }
+/* You can add more nth-child styles for more randomness */
+
+@keyframes tail {
+  0% { width: 0; }
+  30% { width: 100px; }
+  100% { width: 0; }
+}
+
+@keyframes shining {
+  0% { width: 0; }
+  50% { width: 30px; }
+  100% { width: 0; }
+}
+
+@keyframes shooting {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(300px); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Root Variables - Enhanced Dark Theme */
+:root {
+    --primary-color: #6366f1;
+    --secondary-color: #00d4ff;
+    --accent-color: #ff6b35;
+    --dark-color: #0a0a0a;
+    --darker-color: #050505;
+    --card-dark: #1a1a1a;
+    --light-dark: #2a2a2a;
+    --text-color: #e5e5e5;
+    --text-light: #a0a0a0;
+    --text-muted: #6b7280;
+    --white: #ffffff;
+    --black: #000000;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --error-color: #ef4444;
+    --border-color: #374151;
+    --glow-color: rgba(99, 102, 241, 0.3);
+    
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Orbitron', sans-serif;
+    
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --box-shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.7);
+    --box-shadow-glow: 0 0 20px var(--glow-color);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Styles */
+.sponsor-page {
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    background: linear-gradient(135deg, var(--dark-color) 0%, var(--card-dark) 100%);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.sponsor-page * {
+    box-sizing: border-box;
+}
+
+.sponsor-page a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+.sponsor-page h1, 
+.sponsor-page h2, 
+.sponsor-page h3, 
+.sponsor-page h4 {
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    text-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+}
+
+.sponsor-page .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Hero Section - Enhanced with Cosmic Effect */
+.sponsor-page .sponsor-hero-section {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  background:
+        linear-gradient(135deg, rgba(10, 10, 10, 0.8), rgba(26, 26, 26, 0.6)),
+        radial-gradient(circle at 30% 30%, rgba(99, 102, 241, 0.2) 0%, transparent 70%),
+        radial-gradient(circle at 70% 70%, rgba(0, 212, 255, 0.1) 0%, transparent 70%),
+        url('../Rover_image/r4.JPG') no-repeat center center/cover;
+    text-align: center;
+    overflow: hidden;
+    margin-top: -80px;
+    isolation: isolate;
+}
+
+.sponsor-page .sponsor-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+    /* animation: shimmer 3s ease-in-out infinite; */
+    pointer-events: none;
+    margin-bottom: 22rem; 
+    z-index: 1;
+}
+
+.sponsor-page .sponsor-hero-section .hero-content {
+    max-width: 800px;
+    padding: 2.5rem;
+    /* background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(42, 42, 42, 0.8));
+    backdrop-filter: blur(20px); */
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    z-index: 2;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.sponsor-page .sponsor-hero-section .hero-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), var(--secondary-color), transparent);
+}
+
+.sponsor-page .sponsor-hero-section .hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
+    /* animation: glow 2s ease-in-out infinite; */
+}
+
+.sponsor-page .sponsor-hero-section .hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-light);
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+}
+
+.sponsor-page .sponsor-hero-section .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.sponsor-page .sponsor-hero-section .cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: var(--transition);
+}
+
+.sponsor-page .sponsor-hero-section .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.sponsor-page .sponsor-hero-section .cta-button:hover::before {
+    left: 100%;
+}
+
+/* Why Sponsor Section - Enhanced Card Effects */
+.sponsor-page .why-sponsor-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--card-dark) 0%, var(--light-dark) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.sponsor-page .why-sponsor-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.sponsor-page .why-sponsor-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.sponsor-page .why-sponsor-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+    box-shadow: 0 0 15px var(--glow-color);
+}
+
+.sponsor-page .section-intro {
+    text-align: center;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.sponsor-page .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.sponsor-page .benefit-card {
+    background: linear-gradient(135deg, var(--card-dark), var(--light-dark));
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.sponsor-page .benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transition: var(--transition);
+}
+
+.sponsor-page .benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow-hover);
+    border-color: var(--primary-color);
+}
+
+.sponsor-page .benefit-card:hover::before {
+    height: 6px;
+    box-shadow: 0 0 20px var(--glow-color);
+}
+
+.sponsor-page .benefit-icon {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 15px var(--secondary-color);
+}
+
+.sponsor-page .benefit-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.sponsor-page .benefit-card p {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Sponsorship Tiers Section - Enhanced with Glow Effects */
+.sponsor-page .tiers-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--dark-color) 0%, var(--card-dark) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.sponsor-page .tiers-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.sponsor-page .tiers-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.sponsor-page .tiers-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+    box-shadow: 0 0 15px var(--glow-color);
+}
+
+.sponsor-page .tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.sponsor-page .tier-card {
+    background: linear-gradient(135deg, var(--card-dark), var(--light-dark));
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.sponsor-page .tier-card.featured {
+    border: 2px solid var(--accent-color);
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 107, 53, 0.3);
+}
+
+.sponsor-page .tier-card.featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(0, 212, 255, 0.1));
+    z-index: -1;
+}
+
+.sponsor-page .featured-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    color: var(--white);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+}
+
+.sponsor-page .tier-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.sponsor-page .tier-price {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+.sponsor-page .tier-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+}
+
+.sponsor-page .tier-benefits li {
+    padding: 0.75rem 0;
+    color: var(--text-light);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.sponsor-page .tier-benefits li i {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.sponsor-page .tier-button {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+}
+
+.sponsor-page .tier-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+}
+
+.sponsor-page .custom-sponsorship {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--card-dark), var(--light-dark));
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
+}
+
+.sponsor-page .custom-sponsorship p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.sponsor-page .outline-button {
+    display: inline-block;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.sponsor-page .outline-button:hover {
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    color: var(--white);
+    border-color: transparent;
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+}
+
+/* Current Sponsors Section - Enhanced with Hover Effects */
+.sponsor-page .current-sponsors-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--card-dark) 0%, var(--light-dark) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.sponsor-page .current-sponsors-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 30%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.sponsor-page .current-sponsors-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.sponsor-page .current-sponsors-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+    box-shadow: 0 0 15px var(--glow-color);
+}
+
+.sponsor-page .sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.sponsor-page .sponsor-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--card-dark), var(--light-dark));
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    min-height: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sponsor-page .sponsor-logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transition: var(--transition);
+}
+
+.sponsor-page .sponsor-logo:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+    border-color: var(--primary-color);
+}
+
+.sponsor-page .sponsor-logo:hover::before {
+    height: 4px;
+    box-shadow: 0 0 15px var(--glow-color);
+}
+
+.sponsor-page .sponsor-logo img {
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+    /* Removed grayscale and brightness filter to keep original colors */
+    transition: transform 0.3s ease; /* Keep scale transition */
+}
+
+.sponsor-page .sponsor-logo:hover img {
+    transform: scale(1.1); /* Retain scale effect on hover */
+    /* Removed grayscale(0%) brightness(1) since it's now default */
+}
+
+.sponsor-page .become-sponsor {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.sponsor-page .become-sponsor p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Sponsor Form Section - Enhanced with Floating Labels */
+.sponsor-page .sponsor-form-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--dark-color) 0%, var(--card-dark) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.sponsor-page .sponsor-form-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 70%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.sponsor-page .sponsor-form-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.sponsor-page .sponsor-form-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+    box-shadow: 0 0 15px var(--glow-color);
+}
+
+.sponsor-page .sponsor-form {
+    max-width: 800px;
+    margin: 3rem auto;
+    background: linear-gradient(135deg, var(--card-dark), var(--light-dark));
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
+}
+
+.sponsor-page .form-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.sponsor-page .form-group {
+    flex: 1;
+    position: relative;
+}
+
+.sponsor-page .form-group label {
+    position: absolute;
+    top: 0.75rem;
+    left: 1rem;
+    color: var(--text-light);
+    transition: var(--transition);
+    pointer-events: none;
+    font-size: 0.9rem;
+}
+
+.sponsor-page .form-group input,
+.sponsor-page .form-group select,
+.sponsor-page .form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    background: var(--dark-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.sponsor-page .form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.sponsor-page .form-group input:focus,
+.sponsor-page .form-group select:focus,
+.sponsor-page .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.sponsor-page .form-group input:focus + label,
+.sponsor-page .form-group input:not(:placeholder-shown) + label,
+.sponsor-page .form-group select:focus + label,
+.sponsor-page .form-group select:not([value=""]) + label,
+.sponsor-page .form-group textarea:focus + label,
+.sponsor-page .form-group textarea:not(:placeholder-shown) + label {
+    top: -0.5rem;
+    left: 0.8rem;
+    font-size: 0.8rem;
+    background: var(--card-dark);
+    padding: 0 0.5rem;
+    color: var(--secondary-color);
+}
+
+.sponsor-page .submit-button {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    color: var(--white);
+    padding: 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+}
+
+.sponsor-page .submit-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+}
+
+/* Back to Top Button - Enhanced with Pulse Effect */
+.sponsor-page .back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+    animation: pulse 2s infinite;
+}
+
+.sponsor-page .back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sponsor-page .back-to-top:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 15px 30px rgba(99, 102, 241, 0.4);
+}
+
+/* Animations */
+@keyframes shimmer {
+    0%, 100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(100%);
+        opacity: 1;
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 10px var(--primary-color);
+    }
+    50% {
+        text-shadow: 0 0 20px var(--secondary-color);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 15px rgba(99, 102, 241, 0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .sponsor-page .sponsor-hero-section {
+        height: 80vh;
+        min-height: 500px;
+    }
+
+    .sponsor-page .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .sponsor-page .form-row {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .sponsor-page .sponsor-hero-section {
+        height: 70vh;
+        min-height: 400px;
+    }
+
+    .sponsor-page .hero-title {
+        font-size: 2rem;
+    }
+
+    .sponsor-page .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .sponsor-page .why-sponsor-section h2,
+    .sponsor-page .tiers-section h2,
+    .sponsor-page .current-sponsors-section h2,
+    .sponsor-page .sponsor-form-section h2 {
+        font-size: 2rem;
+    }
+
+    .sponsor-page .tier-card.featured {
+        transform: none;
+    }
+
+    .sponsor-page .sponsors-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .sponsor-page .sponsor-hero-section {
+        height: 60vh;
+        min-height: 350px;
+    }
+
+    .sponsor-page .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .sponsor-page .cta-button,
+    .sponsor-page .tier-button,
+    .sponsor-page .outline-button {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .sponsor-page * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

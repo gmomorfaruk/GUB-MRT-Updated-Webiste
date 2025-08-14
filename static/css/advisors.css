@@ -1,0 +1,444 @@
+
+
+/* Team Page CSS - Classy Dark Theme with Starry Background */
+
+/* Starry Background Elements */
+.starry-bg {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#stars {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: 
+        /* Original stars */
+        125px 527px #FFF, 853px 370px #FFF, 1755px 307px #FFF, 1904px 11px #FFF, 
+        1986px 477px #FFF, 1146px 1587px #FFF, 1762px 1807px #FFF, 168px 684px #FFF, 
+        582px 1559px #FFF, 1849px 1244px #FFF, 1818px 1530px #FFF, 1387px 1919px #FFF, 
+        1303px 1725px #FFF, 114px 1377px #FFF, 1613px 1664px #FFF, 492px 1093px #FFF,
+        /* Extra stars */
+        320px 450px #FFF, 640px 900px #FFF, 900px 1200px #FFF, 1500px 800px #FFF, 
+        1700px 400px #FFF, 400px 1600px #FFF, 100px 300px #FFF, 1300px 300px #FFF,
+        600px 1300px #FFF, 1800px 1700px #FFF, 800px 1900px #FFF, 200px 1900px #FFF,
+        1500px 1500px #FFF, 180px 1200px #FFF, 1700px 200px #FFF, 1900px 900px #FFF;
+    animation: animStar 50s linear infinite;
+}
+
+#stars:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: 
+        125px 527px #FFF, 853px 370px #FFF, 1755px 307px #FFF, 1904px 11px #FFF, 
+        1986px 477px #FFF, 1146px 1587px #FFF, 1762px 1807px #FFF, 168px 684px #FFF, 
+        582px 1559px #FFF, 1849px 1244px #FFF, 1818px 1530px #FFF, 1387px 1919px #FFF, 
+        1303px 1725px #FFF, 114px 1377px #FFF, 1613px 1664px #FFF, 492px 1093px #FFF,
+        320px 450px #FFF, 640px 900px #FFF, 900px 1200px #FFF, 1500px 800px #FFF, 
+        1700px 400px #FFF, 400px 1600px #FFF, 100px 300px #FFF, 1300px 300px #FFF,
+        600px 1300px #FFF, 1800px 1700px #FFF, 800px 1900px #FFF, 200px 1900px #FFF,
+        1500px 1500px #FFF, 180px 1200px #FFF, 1700px 200px #FFF, 1900px 900px #FFF;
+}
+
+#stars2 {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: 
+        /* Original */
+        587px 436px #FFF, 1643px 196px #FFF, 1945px 1602px #FFF, 1023px 1931px #FFF, 
+        130px 1875px #FFF, 986px 158px #FFF, 620px 664px #FFF, 1082px 1994px #FFF,
+        /* Extra */
+        400px 1000px #FFF, 700px 1500px #FFF, 1200px 400px #FFF, 1600px 1300px #FFF, 
+        1800px 500px #FFF, 500px 1800px #FFF, 1400px 1700px #FFF, 900px 900px #FFF;
+    animation: animStar 100s linear infinite;
+}
+
+#stars2:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: 
+        587px 436px #FFF, 1643px 196px #FFF, 1945px 1602px #FFF, 1023px 1931px #FFF, 
+        130px 1875px #FFF, 986px 158px #FFF, 620px 664px #FFF, 1082px 1994px #FFF,
+        400px 1000px #FFF, 700px 1500px #FFF, 1200px 400px #FFF, 1600px 1300px #FFF, 
+        1800px 500px #FFF, 500px 1800px #FFF, 1400px 1700px #FFF, 900px 900px #FFF;
+}
+
+#stars3 {
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: 
+        /* Original */
+        406px 350px #FFF, 1356px 2002px #FFF, 248px 1727px #FFF, 1704px 1370px #FFF, 
+        1886px 1396px #FFF, 1580px 130px #FFF, 682px 1994px #FFF, 702px 668px #FFF,
+        /* Extra */
+        1100px 800px #FFF, 1400px 600px #FFF, 1800px 1600px #FFF, 900px 1500px #FFF,
+        400px 400px #FFF, 600px 1200px #FFF, 1500px 1800px #FFF, 300px 1600px #FFF;
+    animation: animStar 150s linear infinite;
+}
+
+#stars3:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: 
+        406px 350px #FFF, 1356px 2002px #FFF, 248px 1727px #FFF, 1704px 1370px #FFF, 
+        1886px 1396px #FFF, 1580px 130px #FFF, 682px 1994px #FFF, 702px 668px #FFF,
+        1100px 800px #FFF, 1400px 600px #FFF, 1800px 1600px #FFF, 900px 1500px #FFF,
+        400px 400px #FFF, 600px 1200px #FFF, 1500px 1800px #FFF, 300px 1600px #FFF;
+}
+
+@keyframes animStar {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-2000px);
+    }
+}
+
+
+
+
+/* Advisors Page Specific Styles */
+
+
+.advisors-hero {
+    height: 90vh;
+    min-height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-color);
+    background:
+        linear-gradient(135deg, rgba(10, 10, 10, 0.8), rgba(26, 26, 26, 0.6)),
+        radial-gradient(circle at 30% 30%, rgba(99, 102, 241, 0.2) 0%, transparent 70%),
+        radial-gradient(circle at 70% 70%, rgba(0, 212, 255, 0.1) 0%, transparent 70%),
+        url('../Rover_image/rover_image.jpg') no-repeat center center/cover;
+    margin-top: 90px;
+    overflow: hidden;
+    z-index: 1; /* Ensure hero appears above stars */
+}
+
+
+.advisors-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 30%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
+    z-index: 1; /* Above starry-bg but below hero-content */
+}
+
+.hero-content {
+    max-width: 800px;
+    /* padding: 20px; */
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    z-index: 2; /* Above starry-bg and ::before */
+    color: var(--text-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Rest of the CSS remains unchanged */
+.advisors-hero .hero-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), var(--secondary-color), transparent);
+}
+
+.advisors-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
+    animation: fadeInDown 1s ease;
+}
+
+.advisors-hero h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+    position: relative;
+}
+
+.advisors-hero h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    box-shadow: 0 0 10px var(--glow-color);
+}
+
+.advisors-hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: var(--text-light);
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+    animation: fadeInUp 1s ease 0.3s forwards;
+    opacity: 0;
+}
+
+/* Advisors Section */
+.advisors-section { 
+    /* padding: 80px 0; */
+    background: linear-gradient(135deg, var(--card-dark), var(--light-dark));
+    position: relative;
+    overflow: hidden;
+}
+
+.advisors-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.team-controls {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    padding: 80px 0; 
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 20px;
+    padding-left: 45px;
+    border: 2px solid var(--border-color);
+    border-radius: 50px;
+    font-size: 1rem;
+    color: var(--text-color);
+    background: var(--card-dark);
+    transition: var(--transition);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+/* Members Grid */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    padding-bottom: 40px
+}
+
+.member {
+    background: linear-gradient(135deg, var(--card-dark), var(--light-dark));
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.member::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    transition: var(--transition);
+}
+
+.member h2::before {
+    content: none; /* Removes the left bar specifically for h2 within .member (e.g., Advisory Board) */
+}
+
+.member:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow-hover);
+    border-color: var(--primary-color);
+}
+
+.member:hover::before {
+    width: 6px;
+    box-shadow: 0 0 20px var(--glow-color);
+}
+
+.member-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    border: 5px solid var(--light-dark);
+    transition: var(--transition);
+}
+
+.member:hover .member-image {
+    filter: drop-shadow(0 10px 25px rgba(99, 102, 241, 0.3));
+    transform: scale(1.05);
+}
+
+.member h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+}
+
+.member p {
+    color: var(--text-light);
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.member-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-link {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    color: var(--secondary-color);
+    text-shadow: 0 0 10px var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .advisors-hero {
+        height: 50vh;
+        min-height: 400px;
+    }
+    
+    .advisors-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .advisors-hero p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .advisors-hero {
+        height: 40vh;
+        min-height: 300px;
+    }
+    
+    .members-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .advisors-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .advisors-hero p {
+        font-size: 1rem;
+    }
+    
+    .member {
+        padding: 20px;
+    }
+    
+    .member-image {
+        width: 120px;
+        height: 120px;
+    }
+}

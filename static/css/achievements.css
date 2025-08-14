@@ -1,0 +1,526 @@
+/* Starry Background Elements */
+.starry-bg {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#stars {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: 
+        125px 527px #FFF, 853px 370px #FFF, 1755px 307px #FFF, 1904px 11px #FFF, 
+        1986px 477px #FFF, 1146px 1587px #FFF, 1762px 1807px #FFF, 168px 684px #FFF, 
+        582px 1559px #FFF, 1849px 1244px #FFF, 1818px 1530px #FFF, 1387px 1919px #FFF, 
+        1303px 1725px #FFF, 114px 1377px #FFF, 1613px 1664px #FFF, 492px 1093px #FFF;
+    animation: animStar 50s linear infinite;
+}
+
+#stars:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: 
+        125px 527px #FFF, 853px 370px #FFF, 1755px 307px #FFF, 1904px 11px #FFF, 
+        1986px 477px #FFF, 1146px 1587px #FFF, 1762px 1807px #FFF, 168px 684px #FFF, 
+        582px 1559px #FFF, 1849px 1244px #FFF, 1818px 1530px #FFF, 1387px 1919px #FFF, 
+        1303px 1725px #FFF, 114px 1377px #FFF, 1613px 1664px #FFF, 492px 1093px #FFF;
+}
+
+#stars2 {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: 
+        587px 436px #FFF, 1643px 196px #FFF, 1945px 1602px #FFF, 1023px 1931px #FFF, 
+        130px 1875px #FFF, 986px 158px #FFF, 620px 664px #FFF, 1082px 1994px #FFF;
+    animation: animStar 100s linear infinite;
+}
+
+#stars2:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: 
+        587px 436px #FFF, 1643px 196px #FFF, 1945px 1602px #FFF, 1023px 1931px #FFF, 
+        130px 1875px #FFF, 986px 158px #FFF, 620px 664px #FFF, 1082px 1994px #FFF;
+}
+
+#stars3 {
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: 
+        406px 350px #FFF, 1356px 2002px #FFF, 248px 1727px #FFF, 1704px 1370px #FFF, 
+        1886px 1396px #FFF, 1580px 130px #FFF, 682px 1994px #FFF, 702px 668px #FFF;
+    animation: animStar 150s linear infinite;
+}
+
+#stars3:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: 
+        406px 350px #FFF, 1356px 2002px #FFF, 248px 1727px #FFF, 1704px 1370px #FFF, 
+        1886px 1396px #FFF, 1580px 130px #FFF, 682px 1994px #FFF, 702px 668px #FFF;
+}
+
+@keyframes animStar {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-2000px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Achievements Page Dark Theme Styles */
+
+/* Hero Section with Cosmic Overlay */
+.achievements-hero {
+    height: 90vh;
+    min-height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 80px;
+    overflow: hidden;
+    background:
+        linear-gradient(135deg, rgba(10, 10, 10, 0.8), rgba(26, 26, 26, 0.6)),
+        radial-gradient(circle at 30% 30%, rgba(99, 102, 241, 0.2) 0%, transparent 70%),
+        radial-gradient(circle at 70% 70%, rgba(0, 212, 255, 0.1) 0%, transparent 70%),  
+        url('../team_images/team_photo.png') no-repeat center center/cover;
+        
+}
+
+/* .achievements-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(120, 119, 198, 0.1) 0%, transparent 70%);
+    animation: particleFloat 20s ease-in-out infinite;
+} */
+
+/* .achievements-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.05) 50%, transparent 70%);
+    animation: shimmer 3s ease-in-out infinite;
+} */
+
+/* Glass-morphism Content Box */
+.achievements-hero .hero-content {
+    max-width: 800px;
+    padding: 40px;
+    /* background: rgba(255, 255, 255, 0.1); */
+    /* backdrop-filter: blur(20px); */
+    /* border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2); */
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+     animation: fadeUp 3s ease-in-out;
+    z-index: 8;
+    position: relative;
+    overflow: hidden;
+}
+
+.achievements-hero .hero-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shimmerTop 3s ease-in-out infinite;
+}
+
+/* Enhanced Gradient Title Text */
+.achievements-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-family: var(--font-secondary, 'Orbitron', sans-serif); /* Match futuristic font */
+    font-weight: 700;
+    background: linear-gradient(135deg, #0c638f 0%, #5c81f8 30%, #6278d3 60%, #2945d5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* text-shadow: 
+        0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 40px rgba(62, 214, 217, 0.3); */
+    /* animation: textGlow 3s ease-in-out infinite; Add glowing animation */
+}
+
+/* Enhanced Subtitle Text */
+.achievements-hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: var(--text-light, rgba(255, 255, 255, 0.9)); /* Use variable for consistency */
+    /* text-shadow: 0 0 15px rgba(0, 212, 255, 0.4); Stronger glow */
+    animation: fadeInUp 1s ease 0.3s forwards;
+    opacity: 0;
+}
+
+/* Enhanced Loading Spinner */
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid transparent;
+    border-top: 3px solid #00bcd4;
+    border-right: 3px solid #7c3aed;
+    border-radius: 50%;
+    position: relative;
+    margin: 30px auto 0;
+    animation: fadeInUp 1s ease 0.6s forwards, spin 1.5s linear infinite;
+    opacity: 0;
+}
+
+.loading-spinner::after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 188, 212, 0.2);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Future Achievements Section - Dark Theme */
+.future-achievements {
+    /* padding: 80px 0; */
+    background: 
+        radial-gradient(circle at 30% 20%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(255, 119, 198, 0.1) 0%, transparent 50%),
+        linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.future-achievements::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 60%, rgba(255, 255, 255, 0.02) 0%, transparent 40%),
+        radial-gradient(circle at 80% 40%, rgba(255, 255, 255, 0.02) 0%, transparent 40%);
+    /* animation: particleFloat 25s ease-in-out infinite reverse; */
+}
+
+.future-achievements h2 {
+    padding-top: 60px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #fff 0%, #e0e7ff 50%, #c7d2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* text-shadow: 0 0 20px rgba(255, 255, 255, 0.3); */
+    /* animation: textGlow 4s ease-in-out infinite; */
+    text-decoration: none; /* Added to remove underline */
+}
+.goals-grid {
+    padding-bottom: 80px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Enhanced Goal Cards with Glass-morphism */
+.goal-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+    border-top: 2px solid transparent;
+    border-image: linear-gradient(90deg, #00bcd4, #7c3aed, #ec4899) 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.goal-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transition: left 0.5s ease;
+}
+
+.goal-card:hover::before {
+    left: 100%;
+}
+
+.goal-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.2),
+        0 0 30px rgba(124, 58, 237, 0.3);
+    border-image: linear-gradient(90deg, #00bcd4, #7c3aed, #ec4899) 1;
+}
+
+.goal-card:nth-child(even):hover {
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.2),
+        0 0 30px rgba(0, 188, 212, 0.3);
+}
+
+.goal-card:nth-child(3n):hover {
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.2),
+        0 0 30px rgba(236, 72, 153, 0.3);
+}
+
+/* Glowing Icons */
+.goal-icon {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #00bcd4 0%, #7c3aed 50%, #ec4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(0, 188, 212, 0.5));
+    animation: iconGlow 3s ease-in-out infinite;
+}
+
+.goal-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.goal-card p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Animations */
+@keyframes particleFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-10px) rotate(1deg); }
+    66% { transform: translateY(5px) rotate(-1deg); }
+}
+
+@keyframes shimmer {
+    0%, 100% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
+}
+
+@keyframes shimmerTop {
+    0%, 100% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
+}
+
+@keyframes textGlow {
+    0%, 100% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(196, 181, 253, 0.3); }
+    50% { text-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 60px rgba(196, 181, 253, 0.5); }
+}
+
+@keyframes iconGlow {
+    0%, 100% { filter: drop-shadow(0 0 10px rgba(0, 188, 212, 0.5)); }
+    50% { filter: drop-shadow(0 0 20px rgba(0, 188, 212, 0.8)); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .achievements-hero {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .achievements-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .achievements-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .achievements-hero .hero-content {
+        padding: 30px;
+    }
+    
+    .future-achievements h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .achievements-hero {
+        height: 50vh;
+        min-height: 300px;
+    }
+    
+    .goals-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .goal-card {
+        padding: 25px;
+    }
+    
+    .achievements-hero .hero-content {
+        padding: 25px;
+        margin: 0 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .achievements-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .achievements-hero p {
+        font-size: 1rem;
+    }
+    
+    .loading-spinner {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .achievements-hero .hero-content {
+        padding: 20px;
+    }
+    
+    .future-achievements {
+        padding: 60px 0;
+    }
+    
+    .future-achievements h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+    .goal-card:hover {
+        transform: none;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    
+    .goal-card:active {
+        transform: translateY(-5px);
+        transition: transform 0.1s ease;
+    }
+}

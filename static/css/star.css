@@ -1,0 +1,13 @@
+/* static/css/star.css */
+#starry-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+}
+
+/* Remove the existing .starry-bg and .stars classes from advisors.css */
