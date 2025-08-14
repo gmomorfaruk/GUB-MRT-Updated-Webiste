@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Atmosphere Vibe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --mars-red: #cd5c5c;
+            --mars-orange: #ff6b35;
+            --mars-brown: #8b4513;
+            --mars-dust: #daa520;
+            --mars-dark: #2f1b14;
+            --mars-light: #ffb347;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Orbitron', monospace;
+            background: var(--mars-dark);
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        /* Mars Atmosphere Container */
+        .mars-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, #2f1b14 0%, #1a0f0a 70%, #0a0606 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        /* Mars Planet */
+        .mars-planet {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle at 30% 30%, #ff6b35 0%, #cd5c5c 40%, #8b4513 70%, #2f1b14 100%);
+            border-radius: 50%;
+            animation: rotatePlanet 20s linear infinite;
+            box-shadow: 
+                0 0 100px rgba(255, 107, 53, 0.3),
+                inset 0 0 50px rgba(139, 69, 19, 0.8),
+                0 0 200px rgba(255, 107, 53, 0.1);
+        }
+
+        .mars-planet::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 60% 20%, rgba(139, 69, 19, 0.8) 0%, transparent 30%),
+                radial-gradient(circle at 20% 70%, rgba(47, 27, 20, 0.6) 0%, transparent 25%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 53, 0.4) 0%, transparent 20%);
+            border-radius: 50%;
+            animation: rotateSurface 25s linear infinite reverse;
+        }
+
+        .mars-planet::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: 
+                repeating-conic-gradient(from 0deg, transparent 0deg, rgba(139, 69, 19, 0.3) 10deg, transparent 20deg),
+                linear-gradient(45deg, transparent 40%, rgba(255, 107, 53, 0.2) 50%, transparent 60%);
+            border-radius: 50%;
+            animation: rotatePlanet 30s linear infinite;
+        }
+
+        /* Atmospheric Layers */
+        .atmosphere {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, transparent 60%, rgba(255, 107, 53, 0.1) 70%, rgba(255, 107, 53, 0.05) 85%, transparent 100%);
+            animation: pulseAtmosphere 8s ease-in-out infinite;
+        }
+
+        .atmosphere::before {
+            content: '';
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            top: -10%;
+            left: -10%;
+            border-radius: 50%;
+            background: radial-gradient(circle, transparent 70%, rgba(205, 92, 92, 0.05) 80%, transparent 90%);
+            animation: pulseAtmosphere 12s ease-in-out infinite reverse;
+        }
+
+        /* Dust Storm Effects */
+        .dust-storm {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse at 20% 30%, rgba(218, 165, 32, 0.1) 0%, transparent 40%),
+                radial-gradient(ellipse at 80% 70%, rgba(255, 107, 53, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 60% 40%, rgba(139, 69, 19, 0.05) 0%, transparent 60%);
+            animation: dustStorm 15s ease-in-out infinite;
+        }
+
+        .dust-storm::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(45deg, transparent 30%, rgba(218, 165, 32, 0.03) 40%, transparent 50%),
+                linear-gradient(-45deg, transparent 60%, rgba(255, 107, 53, 0.02) 70%, transparent 80%);
+            animation: dustStorm 20s ease-in-out infinite reverse;
+        }
+
+        /* Floating Particles */
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--mars-dust);
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: floatParticle 10s linear infinite;
+            box-shadow: 0 0 4px rgba(218, 165, 32, 0.5);
+        }
+
+        /* Mars Terrain Silhouette */
+        .terrain {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(to top, #2f1b14 0%, #1a0f0a 70%, transparent 100%);
+            animation: terrainShift 25s ease-in-out infinite;
+        }
+
+        .terrain::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: 
+                radial-gradient(ellipse at 10% 100%, #8b4513 0%, transparent 30%),
+                radial-gradient(ellipse at 30% 100%, #2f1b14 0%, transparent 25%),
+                radial-gradient(ellipse at 50% 100%, #8b4513 0%, transparent 35%),
+                radial-gradient(ellipse at 70% 100%, #2f1b14 0%, transparent 25%),
+                radial-gradient(ellipse at 90% 100%, #8b4513 0%, transparent 30%);
+            animation: terrainShift 30s ease-in-out infinite reverse;
+        }
+
+        /* Aurora-like Effects */
+        .aurora {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, 
+                transparent 20%, 
+                rgba(255, 107, 53, 0.03) 30%, 
+                transparent 40%,
+                rgba(205, 92, 92, 0.02) 60%,
+                transparent 70%
+            );
+            animation: aurora 18s ease-in-out infinite;
+        }
+
+        /* Stars */
+        .star {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s ease-in-out infinite;
+        }
+
+        .star.bright {
+            width: 2px;
+            height: 2px;
+            box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 400px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(255, 107, 53, 0.2);
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--mars-red), var(--mars-orange));
+            border-radius: 4px;
+            width: 0%;
+            animation: progressFill 8s ease-out forwards;
+            box-shadow: 0 0 15px rgba(255, 107, 53, 0.8);
+        }
+
+        /* Loading Text */
+        .loading-text {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--mars-light);
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-align: center;
+            animation: pulse 2s ease-in-out infinite;
+            text-shadow: 0 0 20px rgba(255, 179, 71, 0.8);
+        }
+
+        /* Main Content */
+        .main-content {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: var(--mars-light);
+            z-index: 10;
+        }
+
+        .main-content.show {
+            display: block;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .main-content h1 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            text-shadow: 0 0 30px rgba(255, 107, 53, 0.8);
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        .typing-container {
+            min-height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .typing-text {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            min-height: 60px;
+            max-width: 600px;
+        }
+
+        .cursor {
+            display: inline-block;
+            background-color: var(--mars-orange);
+            width: 3px;
+            animation: blink 1s infinite;
+            margin-left: 2px;
+        }
+
+        /* Keyframes */
+        @keyframes rotatePlanet {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes rotateSurface {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes pulseAtmosphere {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.1); }
+        }
+
+        @keyframes dustStorm {
+            0%, 100% { opacity: 0.2; transform: translateX(0%) rotate(0deg); }
+            25% { opacity: 0.4; transform: translateX(-10%) rotate(5deg); }
+            50% { opacity: 0.6; transform: translateX(10%) rotate(-5deg); }
+            75% { opacity: 0.3; transform: translateX(-5%) rotate(3deg); }
+        }
+
+        @keyframes floatParticle {
+            0% { transform: translateY(100vh) translateX(0px); opacity: 0; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
+            100% { transform: translateY(-100px) translateX(100px); opacity: 0; }
+        }
+
+        @keyframes terrainShift {
+            0%, 100% { transform: translateX(0px); }
+            50% { transform: translateX(-20px); }
+        }
+
+        @keyframes aurora {
+            0%, 100% { opacity: 0.1; transform: skewX(0deg); }
+            25% { opacity: 0.3; transform: skewX(5deg); }
+            50% { opacity: 0.2; transform: skewX(-5deg); }
+            75% { opacity: 0.4; transform: skewX(3deg); }
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes progressFill {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+            to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+        }
+
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 30px rgba(255, 107, 53, 0.8); }
+            50% { text-shadow: 0 0 50px rgba(255, 107, 53, 1), 0 0 70px rgba(255, 107, 53, 0.6); }
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mars-planet {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .atmosphere {
+                width: 280px;
+                height: 280px;
+            }
+            
+            .progress-container {
+                width: 300px;
+            }
+            
+            .loading-text {
+                font-size: 1rem;
+            }
+
+            .main-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mars-container" id="marsContainer">
+        <!-- Mars Planet -->
+        <div class="mars-planet"></div>
+        
+        <!-- Atmospheric Effects -->
+        <div class="atmosphere"></div>
+        
+        <!-- Dust Storm -->
+        <div class="dust-storm"></div>
+        
+        <!-- Aurora Effects -->
+        <div class="aurora"></div>
+        
+        <!-- Terrain -->
+        <div class="terrain"></div>
+        
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+        
+        <!-- Loading Text -->
+        <div class="loading-text">ENTERING MARS ATMOSPHERE...</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <h1>🌌 MARS ATMOSPHERE 🌌</h1>
+        <div class="typing-container">
+            <p class="typing-text" id="typingText">
+                <span class="typed-content"></span>
+                <span class="cursor">|</span>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 10 + 's';
+                particle.style.animationDuration = (Math.random() * 15 + 10) + 's';
+                document.querySelector('.mars-container').appendChild(particle);
+            }
+        }
+
+        // Create stars
+        function createStars() {
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = Math.random() > 0.8 ? 'star bright' : 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 60 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                document.querySelector('.mars-container').appendChild(star);
+            }
+        }
+
+        // Typing animation
+        function typeText(element, text, speed = 50) {
+            return new Promise((resolve) => {
+                let i = 0;
+                const typingInterval = setInterval(() => {
+                    if (i < text.length) {
+                        element.textContent += text.charAt(i);
+                        i++;
+                    } else {
+                        clearInterval(typingInterval);
+                        resolve();
+                    }
+                }, speed);
+            });
+        }
+
+        async function clearAndType(element, text, speed = 50) {
+            element.textContent = '';
+            await typeText(element, text, speed);
+        }
+
+        async function startTypingSequence() {
+            const typedContent = document.querySelector('.typed-content');
+            
+            const messages = [
+                "Welcome to the Red Planet...",
+                "Atmospheric pressure: 0.6% of Earth's...",
+                "Surface temperature: -80°C to 20°C...",
+                "Dust storms can last for months...",
+                "The sky appears butterscotch during day...",
+                "Two moons orbit this mysterious world...",
+                "Ancient riverbeds tell stories of water...",
+                "Polar ice caps shimmer in the distance...",
+                "The future of human exploration awaits..."
+            ];
+            
+            for (let i = 0; i < messages.length; i++) {
+                await clearAndType(typedContent, messages[i], 60);
+                await new Promise(resolve => setTimeout(resolve, 3000));
+            }
+            
+            await clearAndType(typedContent, "🔴 MARS: THE NEXT FRONTIER 🔴", 80);
+        }
+
+        // Initialize
+        createParticles();
+        createStars();
+
+        // Show main content after loading
+        setTimeout(() => {
+            const marsContainer = document.getElementById('marsContainer');
+            const mainContent = document.getElementById('mainContent');
+            
+            // Hide loading elements
+            document.querySelector('.progress-container').style.display = 'none';
+            document.querySelector('.loading-text').style.display = 'none';
+            
+            // Show main content
+            mainContent.classList.add('show');
+            
+            // Start typing animation
+            setTimeout(() => {
+                startTypingSequence();
+            }, 500);
+        }, 8500);
+
+        // Optional: Create dynamic dust particles
+        setInterval(() => {
+            if (Math.random() > 0.7) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDuration = (Math.random() * 10 + 8) + 's';
+                document.querySelector('.mars-container').appendChild(particle);
+                
+                setTimeout(() => {
+                    particle.remove();
+                }, 15000);
+            }
+        }, 2000);
+        setTimeout(() => {
+            window.location.href = 'index.html'; // Adjust path if needed (e.g., './index.html' or full URL)
+        }, 8500);
+    </script>
+</body>
+</html>
