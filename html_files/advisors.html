@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUB MRT - Advisors</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/advisors.css">
+     <link rel="stylesheet" href="../static/css/star.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../static/Logo/favicon.ico" type="image/x-icon">
+</head>
+<body class="advisors-page">
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <div class="university-logo">
+                    <img src="../static/Logo/mylogo.png" alt="GUB Logo" loading="lazy">
+                </div>
+                <div class="team-logo">
+                    <a href="../index.html">
+                        <img src="../static/Logo/logo.png" alt="GUB MRT Logo" loading="lazy">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hamburger-menu" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Team <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="advisors.html" class="dropdown-link active">Advisors</a></li>
+                            <li><a href="team.html" class="dropdown-link">Members</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="sponsor.html" class="nav-link">Sponsors</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Advisors Hero Section -->
+        <section class="advisors-hero">
+            <div class="starry-bg" aria-hidden="true">
+                <div class="stars">
+                    <div id="stars"></div>
+                    <div id="stars2"></div>
+                    <div id="stars3"></div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1>Our Advisors</h1>
+                <p>Meet the esteemed advisors guiding the GUB Mars Rover Team with their expertise and experience.</p>
+            </div>
+        </section>
+
+
+    
+        <!-- Advisors Section -->
+        <section class="advisors-section">
+
+                    <!-- STAR BACKGROUND WRAPPER - NEW CODE STARTS HERE -->
+        <div class="starry-bg">
+            <div class="stars">
+                <div id="stars"></div>
+                <div id="stars2"></div>
+                <div id="stars3"></div>
+            </div>
+        <!-- STAR BACKGROUND WRAPPER - NEW CODE ENDS HERE -->
+
+
+            <div class="container">            
+                <div class="team-controls">
+                    <div class="search-box">
+                        <input type="text" class="search-input" placeholder="Search advisors..." id="searchInput" aria-label="Search advisors">
+                        <span class="search-icon"><i class="fas fa-search" aria-hidden="true"></i></span>
+                    </div>
+                </div>
+
+                <h2 class="section-title">Advisory Board</h2>
+                <div class="members-grid" aria-live="polite">
+                    <!-- Advisor 1 -->
+                    <div class="member" data-name="Md. Mohammad Shorif Uddin" data-role="Professor & Vice-Chancellor">
+                        <img src="../static/images/vc.png" alt="Prof. Dr. Md. Mohammad Shorif Uddin" class="member-image" loading="lazy">
+                        <h3>Prof. Dr. Md. Mohammad Shorif Uddin</h3>
+                        <p>Professor & Vice-Chancellor</p>
+                        <div class="member-social">
+                            <a href="#" class="social-link" aria-label="Email Prof. Dr. Md. Mohammad Shorif Uddin"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="social-link" aria-label="LinkedIn profile of Prof. Dr. Md. Mohammad Shorif Uddin"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Advisor 2 -->
+                    <div class="member" data-name="Khawza Iftekhar Uddin Ahmed" data-role="Pro Vice Chancellor">
+                        <img src="../static/images/provc_sir.png" alt="Prof. Dr. Khawza Iftekhar Uddin Ahmed" class="member-image" loading="lazy">
+                        <h3>Prof. Dr. Khawza Iftekhar Uddin Ahmed</h3>
+                        <p>Pro Vice Chancellor</p>
+                        <div class="member-social">
+                            <a href="#" class="social-link" aria-label="Email Prof. Dr. Khawza Iftekhar Uddin Ahmed"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="social-link" aria-label="LinkedIn profile of Prof. Dr. Khawza Iftekhar Uddin Ahmed"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Advisor 3 -->
+                    <div class="member" data-name="Md. Fayzur Rahman" data-role="Treasurer">
+                        <img src="../static/images/tresurer.jpg" alt="Prof. Dr. Md. Fayzur Rahman" class="member-image" loading="lazy">
+                        <h3>Prof. Dr. Md. Fayzur Rahman</h3>
+                        <p>Treasurer</p>
+                        <div class="member-social">
+                            <a href="#" class="social-link" aria-label="Email Prof. Dr. Md. Fayzur Rahman"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="social-link" aria-label="LinkedIn profile of Prof. Dr. Md. Fayzur Rahman"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Advisor 4 -->
+                    <div class="member" data-name="Shaikh Mohammad Salahuddin" data-role="Registrar">
+                        <img src="../static/images/register.png" alt="Captain (Navy) Shaikh Mohammad Salahuddin" class="member-image" loading="lazy">
+                        <h3>Captain (Navy) Shaikh Mohammad Salahuddin</h3>
+                        <p>Registrar</p>
+                        <div class="member-social">
+                            <a href="#" class="social-link" aria-label="Email Captain (Navy) Shaikh Mohammad Salahuddin"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="social-link" aria-label="LinkedIn profile of Captain (Navy) Shaikh Mohammad Salahuddin"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Advisor 5 -->
+                    <div class="member" data-name="Md. Saiful Azad" data-role="Dean, Faculty of FSE">
+                        <img src="../static/images/dean.jpg" alt="Prof. Dr. Md. Saiful Azad" class="member-image" loading="lazy">
+                        <h3>Prof. Dr. Md. Saiful Azad</h3>
+                        <p>Dean, Faculty of FSE</p>
+                        <div class="member-social">
+                            <a href="#" class="social-link" aria-label="Email Prof. Dr. Md. Saiful Azad"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="social-link" aria-label="LinkedIn profile of Prof. Dr. Md. Saiful Azad"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Advisor 6 -->
+                    <div class="member" data-name="Md. Ahsan Habib" data-role="Chairperson, CSE">
+                        <img src="../static/images/ahsanhabib.jpg" alt="Professor Dr. Md. Ahsan Habib" class="member-image" loading="lazy">
+                        <h3>Professor Dr. Md. Ahsan Habib</h3>
+                        <p>Chairperson, CSE</p>
+                        <div class="member-social">
+                            <a href="#" class="social-link" aria-label="Email Professor Dr. Md. Ahsan Habib"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="social-link" aria-label="LinkedIn profile of Professor Dr. Md. Ahsan Habib"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Advisor 7 -->
+                    <div class="member" data-name="Md. Hasan Maruf" data-role="Associate Professor">
+                        <img src="../static/images/maruf.jpg" alt="Dr. Md. Hasan Maruf" class="member-image" loading="lazy">
+                        <h3>Dr. Md. Hasan Maruf</h3>
+                        <p>Associate Professor</p>
+                        <div class="member-social">
+                            <a href="#" class="social-link" aria-label="Email Dr. Md. Hasan Maruf"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="social-link" aria-label="LinkedIn profile of Dr. Md. Hasan Maruf"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Advisor 8 -->
+                    <div class="member" data-name="Solaiman Mia" data-role="Assistant Professor and Deputy Director of Student Affairs">
+                        <img src="../static/images/solaiman.jpg" alt="Md. Solaiman Mia" class="member-image" loading="lazy">
+                        <h3>Md. Solaiman Mia</h3>
+                        <p>Assistant Professor and Deputy Director of Student Affairs</p>
+                        <div class="member-social">
+                            <a href="#" class="social-link" aria-label="Email Md. Solaiman Mia"><i class="fas fa-envelope"></i></a>
+                            <a href="#" class="social-link" aria-label="LinkedIn profile of Md. Solaiman Mia"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="../static/Logo/logo.png" alt="GUB MRT Logo" class="footer-logo" loading="lazy">
+                    <p class="footer-description">GUB Mars Rover Team is a student organization dedicated to advancing space robotics technology through innovation and competition.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/gubmrt" target="_blank" class="social-icon" aria-label="GUB MRT Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/gubmrt" target="_blank" class="social-icon" aria-label="GUB MRT Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com/company/gubmrt" target="_blank" class="social-icon" aria-label="GUB MRT LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://instagram.com/gubmrt" target="_blank" class="social-icon" aria-label="GUB MRT Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@GUBMRT" target="_blank" class="social-icon" aria-label="GUB MRT YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="achievements.html">Achievements</a></li>
+                        <li><a href="sponsor.html">Sponsors</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/AuxrrniasUnvKS897" target="_blank">Green University of Bangladesh, Dhaka</a></li>
+                        <li><i class="fas fa-envelope"></i> marsrover@green.edu.bd</li>
+                        <li><i class="fas fa-phone"></i> +880 1580429635</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3 class="footer-heading">Stay Updated</h3>
+                    <p>Subscribe to our newsletter for the latest updates</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your Email" required aria-label="Email for newsletter">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+                <div class="footer-copyright">
+                    © <span id="current-year"></span> GUB Mars Rover Team. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Loading Animation
+        window.addEventListener('load', function() {
+            const loader = document.querySelector('.loader-wrapper');
+            if (loader) {
+                setTimeout(function() {
+                    loader.style.opacity = '0';
+                    setTimeout(function() {
+                        loader.style.display = 'none';
+                    }, 500);
+                }, 1000);
+            }
+        });
+
+        // Mobile Navigation
+        const hamburger = document.querySelector('.hamburger-menu');
+        const nav = document.querySelector('.main-nav');
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('open');
+            nav.classList.toggle('active');
+        });
+        
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const dropdown = this.parentElement;
+                dropdown.classList.toggle('active');
+            });
+        });
+        
+        // Close mobile menu when clicking a link
+        const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 992) {
+                    hamburger.classList.remove('open');
+                    nav.classList.remove('active');
+                }
+            });
+        });
+        
+        // Sticky Header
+        const header = document.querySelector('.main-header');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Back to Top Button
+        const backToTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        backToTop.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Active link highlighting
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinksAll = document.querySelectorAll('.nav-link, .dropdown-link');
+        
+        navLinksAll.forEach(link => {
+            const linkPage = link.getAttribute('href').split('/').pop();
+            if (currentPage === linkPage) {
+                link.classList.add('active');
+                if (link.closest('.dropdown')) {
+                    link.closest('.dropdown').querySelector('.dropdown-toggle').classList.add('active');
+                }
+            }
+        });
+        
+        // Search functionality (enhanced to include role)
+        const searchInput = document.getElementById('searchInput');
+        const members = document.querySelectorAll('.member');
+        
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            members.forEach(member => {
+                const name = member.getAttribute('data-name').toLowerCase();
+                const role = member.getAttribute('data-role').toLowerCase();
+                const isVisible = name.includes(searchTerm) || role.includes(searchTerm);
+                member.style.display = isVisible ? 'block' : 'none';
+            });
+        });
+
+        // Add entrance animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.member').forEach((member, index) => {
+            member.style.opacity = '0';
+            member.style.transform = 'translateY(50px)';
+            member.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+            observer.observe(member);
+        });
+
+        // Add click effects
+        members.forEach(member => {
+            member.addEventListener('click', function() {
+                this.style.transform = 'translateY(-15px) scale(1.02)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 200);
+            });
+        });
+
+        // Newsletter form submission
+        const newsletterForm = document.getElementById('newsletterForm');
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input').value;
+            if (email) {
+                alert('Thank you for subscribing!');
+                this.reset();
+            }
+        });
+
+        // Reduce motion for accessibility
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            // Starry background is already handled by CSS animations
+        }
+    });
+    </script>
+
+
+<!-- Add this line -->
+<script src="{{ url_for('static', filename='javascript/star.js') }}"></script>
+</body>
+</html>
